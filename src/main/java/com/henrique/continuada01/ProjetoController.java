@@ -53,8 +53,8 @@ public class ProjetoController {
 
     //    Excluir projeto
     @DeleteMapping("/excluir/{id}")
-    public void excluirProjeto(@PathVariable int id) {
-        feedManager.deletarProjeto(id);
+    public String excluirProjeto(@PathVariable int id) {
+        return feedManager.deletarProjeto(id);
     }
 
     //    Atualizar projeto mobile

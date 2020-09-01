@@ -20,8 +20,13 @@ public class FeedManager {
         this.projetoList.add(id - 1, p);
     }
 
-    public void deletarProjeto(int id) {
-        this.projetoList.remove(id - 1);
+    public String deletarProjeto(int id) {
+        if (id <= this.projetoList.size()) {
+            this.projetoList.remove(id - 1);
+            return "Projeto excluído!";
+        } else {
+            return "Não existe um projeto com o id especificado";
+        }
     }
 
     public void alterarProjeto(int id, Projeto p) {
