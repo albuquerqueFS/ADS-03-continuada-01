@@ -8,6 +8,7 @@ public class Mobile extends Projeto {
     public Mobile(String titulo, String descricao, double valorTotal, int prazo, String tipo, String plataforma) {
         super(titulo, descricao, valorTotal, prazo, tipo);
         this.plataforma = plataforma;
+        setValorTotal(calcularValorTotal(valorTotal));
     }
 
     public String getPlataforma() {
@@ -19,7 +20,7 @@ public class Mobile extends Projeto {
     }
 
     @Override
-    public double calcularValorTotal() {
-        return super.calcularValorTotal();
+    public double calcularValorTotal(double valorProjeto) {
+        return valorProjeto * 1.2;
     }
 }

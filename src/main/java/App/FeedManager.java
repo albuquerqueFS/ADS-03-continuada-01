@@ -36,4 +36,24 @@ public class FeedManager {
     public List<Projeto> exibirTodosOsProjetos() {
         return this.projetoList;
     }
+
+    public List<Projeto> listarProjetosWeb() {
+        List<Projeto> projWeb = new ArrayList<>();
+
+        this.projetoList.forEach(projeto -> {
+            if (projeto instanceof Web) projWeb.add(projeto);
+        });
+
+        return projWeb;
+    }
+
+    public List<Projeto> listarProjetosMobile() {
+        List<Projeto> projMobile = new ArrayList<>();
+
+        this.projetoList.forEach(projeto -> {
+            if (projeto instanceof Mobile) projMobile.add(projeto);
+        });
+
+        return projMobile;
+    }
 }

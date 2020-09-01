@@ -50,8 +50,8 @@ public abstract class Projeto implements Cobranca {
     }
 
     @Override
-    public double calcularValorTotal() {
-        return 0;
+    public double calcularValorTotal(double valorProjeto) {
+        return this.getValorTotal() * 1.5;
     }
 
     @Override

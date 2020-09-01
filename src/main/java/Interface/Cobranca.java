@@ -1,5 +1,5 @@
 package Interface;
 
 public interface Cobranca {
-    public double calcularValorTotal();
+    public double calcularValorTotal(double valorProjeto);
 }
